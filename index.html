@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="shortcut icon" href="images/twitter-favicon.ico" type="image/x-icon">
+    <title>Página Inicial / Twitter Clone</title>
+    <script src="https://kit.fontawesome.com/4c32cf71e2.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a33530bb41.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="content">
+        <div class="wrapper-sidebar">
+            <nav class="left-sidebar">
+                
+                <ul>
+                    <li><i class="fab fa-twitter logo-twitter"></i></li>
+                    <li>
+                        <a>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M6 22.8787C4.34315 22.8787 3 21.5355 3 19.8787V9.87866C3 9.84477 3.00169 9.81126 3.00498 9.77823H3C3 9.20227 3.2288 8.64989 3.63607 8.24262L9.87868 2.00002C11.0502 0.828445 12.9497 0.828445 14.1213 2.00002L20.3639 8.24264C20.7712 8.6499 21 9.20227 21 9.77823H20.995C20.9983 9.81126 21 9.84477 21 9.87866V19.8787C21 21.5355 19.6569 22.8787 18 22.8787H6ZM12.7071 3.41423L19 9.70713V19.8787C19 20.4309 18.5523 20.8787 18 20.8787H15V15.8787C15 14.2218 13.6569 12.8787 12 12.8787C10.3431 12.8787 9 14.2218 9 15.8787V20.8787H6C5.44772 20.8787 5 20.4309 5 19.8787V9.7072L11.2929 3.41423C11.6834 3.02371 12.3166 3.02371 12.7071 3.41423Z" fill="currentColor" /></svg>
+                            <span href="">Página Inicial</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M18.319 14.4326C20.7628 11.2941 20.542 6.75347 17.6569 3.86829C14.5327 0.744098 9.46734 0.744098 6.34315 3.86829C3.21895 6.99249 3.21895 12.0578 6.34315 15.182C9.22833 18.0672 13.769 18.2879 16.9075 15.8442C16.921 15.8595 16.9351 15.8745 16.9497 15.8891L21.1924 20.1317C21.5829 20.5223 22.2161 20.5223 22.6066 20.1317C22.9971 19.7412 22.9971 19.1081 22.6066 18.7175L18.364 14.4749C18.3493 14.4603 18.3343 14.4462 18.319 14.4326ZM16.2426 5.28251C18.5858 7.62565 18.5858 11.4246 16.2426 13.7678C13.8995 16.1109 10.1005 16.1109 7.75736 13.7678C5.41421 11.4246 5.41421 7.62565 7.75736 5.28251C10.1005 2.93936 13.8995 2.93936 16.2426 5.28251Z" fill="currentColor" /></svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 4V8H4V10H8V14H4V16H8V20H10V16H14V20H16V16H20V14H16V10H20V8H16V4H14V8H10V4H8ZM14 14V10H10V14H14Z" fill="currentColor" /></svg>
+                            <span href="">Explorar</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M14 3V3.28988C16.8915 4.15043 19 6.82898 19 10V17H20V19H4V17H5V10C5 6.82898 7.10851 4.15043 10 3.28988V3C10 1.89543 10.8954 1 12 1C13.1046 1 14 1.89543 14 3ZM7 17H17V10C17 7.23858 14.7614 5 12 5C9.23858 5 7 7.23858 7 10V17ZM14 21V20H10V21C10 22.1046 10.8954 23 12 23C13.1046 23 14 22.1046 14 21Z" fill="currentColor" /></svg>
+                            </svg>
+                            <span href="">Notificações</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.00977 5.83789C3.00977 5.28561 3.45748 4.83789 4.00977 4.83789H20C20.5523 4.83789 21 5.28561 21 5.83789V17.1621C21 18.2667 20.1046 19.1621 19 19.1621H5C3.89543 19.1621 3 18.2667 3 17.1621V6.16211C3 6.11449 3.00333 6.06765 3.00977 6.0218V5.83789ZM5 8.06165V17.1621H19V8.06199L14.1215 12.9405C12.9499 14.1121 11.0504 14.1121 9.87885 12.9405L5 8.06165ZM6.57232 6.80554H17.428L12.7073 11.5263C12.3168 11.9168 11.6836 11.9168 11.2931 11.5263L6.57232 6.80554Z" fill="currentColor" /></svg>
+                            <span href="">Mensagens</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M19 20H17.1717L12.7072 15.5354C12.3166 15.1449 11.6835 15.1449 11.2929 15.5354L6.82843 20L5 20V7C5 5.34315 6.34315 4 8 4H16C17.6569 4 19 5.34314 19 7V20ZM17 7C17 6.44772 16.5523 6 16 6H8C7.44772 6 7 6.44772 7 7V17L9.87873 14.1212C11.0503 12.9497 12.9498 12.9497 14.1214 14.1212L17 16.9999V7Z" fill="currentColor" /></svg>
+                            <span href="">Itens Salvos</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 6C6 5.44772 6.44772 5 7 5H17C17.5523 5 18 5.44772 18 6C18 6.55228 17.5523 7 17 7H7C6.44771 7 6 6.55228 6 6Z" fill="currentColor" /><path d="M6 10C6 9.44771 6.44772 9 7 9H17C17.5523 9 18 9.44771 18 10C18 10.5523 17.5523 11 17 11H7C6.44771 11 6 10.5523 6 10Z" fill="currentColor" /><path d="M7 13C6.44772 13 6 13.4477 6 14C6 14.5523 6.44771 15 7 15H17C17.5523 15 18 14.5523 18 14C18 13.4477 17.5523 13 17 13H7Z" fill="currentColor" /><path d="M6 18C6 17.4477 6.44772 17 7 17H11C11.5523 17 12 17.4477 12 18C12 18.5523 11.5523 19 11 19H7C6.44772 19 6 18.5523 6 18Z" fill="currentColor" /><path fill-rule="evenodd" clip-rule="evenodd" d="M2 4C2 2.34315 3.34315 1 5 1H19C20.6569 1 22 2.34315 22 4V20C22 21.6569 20.6569 23 19 23H5C3.34315 23 2 21.6569 2 20V4ZM5 3H19C19.5523 3 20 3.44771 20 4V20C20 20.5523 19.5523 21 19 21H5C4.44772 21 4 20.5523 4 20V4C4 3.44772 4.44771 3 5 3Z" fill="currentColor" /></svg>
+                            <span href="">Listas</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7ZM14 7C14 8.10457 13.1046 9 12 9C10.8954 9 10 8.10457 10 7C10 5.89543 10.8954 5 12 5C13.1046 5 14 5.89543 14 7Z" fill="currentColor" /><path d="M16 15C16 14.4477 15.5523 14 15 14H9C8.44772 14 8 14.4477 8 15V21H6V15C6 13.3431 7.34315 12 9 12H15C16.6569 12 18 13.3431 18 15V21H16V15Z" fill="currentColor" /></svg>
+                            <span href="">Perfil</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 14C8.10457 14 9 13.1046 9 12C9 10.8954 8.10457 10 7 10C5.89543 10 5 10.8954 5 12C5 13.1046 5.89543 14 7 14Z" fill="currentColor" /><path d="M14 12C14 13.1046 13.1046 14 12 14C10.8954 14 10 13.1046 10 12C10 10.8954 10.8954 10 12 10C13.1046 10 14 10.8954 14 12Z" fill="currentColor" /><path d="M17 14C18.1046 14 19 13.1046 19 12C19 10.8954 18.1046 10 17 10C15.8954 10 15 10.8954 15 12C15 13.1046 15.8954 14 17 14Z" fill="currentColor" /><path fill-rule="evenodd" clip-rule="evenodd" d="M24 12C24 18.6274 18.6274 24 12 24C5.37258 24 0 18.6274 0 12C0 5.37258 5.37258 0 12 0C18.6274 0 24 5.37258 24 12ZM22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" fill="currentColor" /></svg>
+                            <span href="">Mais</span>
+                        </a>
+                    </li>
+                </ul>
+                <button>
+                    <span>Tweetar</span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M21.2635 2.29289C20.873 1.90237 20.2398 1.90237 19.8493 2.29289L18.9769 3.16525C17.8618 2.63254 16.4857 2.82801 15.5621 3.75165L4.95549 14.3582L10.6123 20.0151L21.2189 9.4085C22.1426 8.48486 22.338 7.1088 21.8053 5.99367L22.6777 5.12132C23.0682 4.7308 23.0682 4.09763 22.6777 3.70711L21.2635 2.29289ZM16.9955 10.8035L10.6123 17.1867L7.78392 14.3582L14.1671 7.9751L16.9955 10.8035ZM18.8138 8.98525L19.8047 7.99429C20.1953 7.60376 20.1953 6.9706 19.8047 6.58007L18.3905 5.16586C18 4.77534 17.3668 4.77534 16.9763 5.16586L15.9853 6.15683L18.8138 8.98525Z" fill="currentColor" /><path d="M2 22.9502L4.12171 15.1717L9.77817 20.8289L2 22.9502Z" fill="currentColor" /></svg>
+                </button>
+                <div class="perfil">
+                    <picture>
+                        <img src="images/perfil.png" alt="">
+                    </picture>
+                    <div>
+                        <p>Tupis</p>
+                        <p>@the_tupis</p>
+                    </div>
+                    <span>...</span>
+                </div>
+            </nav>
+        </div>
+
+        <main class="main">
+            
+            <button>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M21.2635 2.29289C20.873 1.90237 20.2398 1.90237 19.8493 2.29289L18.9769 3.16525C17.8618 2.63254 16.4857 2.82801 15.5621 3.75165L4.95549 14.3582L10.6123 20.0151L21.2189 9.4085C22.1426 8.48486 22.338 7.1088 21.8053 5.99367L22.6777 5.12132C23.0682 4.7308 23.0682 4.09763 22.6777 3.70711L21.2635 2.29289ZM16.9955 10.8035L10.6123 17.1867L7.78392 14.3582L14.1671 7.9751L16.9955 10.8035ZM18.8138 8.98525L19.8047 7.99429C20.1953 7.60376 20.1953 6.9706 19.8047 6.58007L18.3905 5.16586C18 4.77534 17.3668 4.77534 16.9763 5.16586L15.9853 6.15683L18.8138 8.98525Z" fill="currentColor" /><path d="M2 22.9502L4.12171 15.1717L9.77817 20.8289L2 22.9502Z" fill="currentColor" /></svg>
+            </button>
+            
+                <div class="wrapper-top">
+                    <div class="top">
+                        <div class="top-menu">
+                            <picture>
+                                <img src="images/perfil.png" alt="">
+                            </picture>
+                            <h1>Página Inicial</h1>
+                        </div>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M14.738 19.9964C14.8186 19.9988 14.8994 20 14.9806 20C19.3989 20 22.9806 16.4183 22.9806 12C22.9806 7.58172 19.3989 4 14.9806 4C12.4542 4 10.2013 5.17108 8.73522 7H7.51941C3.92956 7 1.01941 9.91015 1.01941 13.5C1.01941 17.0899 3.92956 20 7.51941 20H14.5194C14.5926 20 14.6654 19.9988 14.738 19.9964ZM16.6913 17.721C19.0415 16.9522 20.9806 14.6815 20.9806 12C20.9806 8.68629 18.2943 6 14.9806 6C11.6669 6 8.98059 8.68629 8.98059 12H6.98059C6.98059 10.9391 7.1871 9.92643 7.56211 9H7.51941C5.03413 9 3.01941 11.0147 3.01941 13.5C3.01941 15.9853 5.03413 18 7.51941 18H14.5194C15.0691 18 15.9041 17.9014 16.6913 17.721Z" fill="currentColor" /></svg>
+                    </div>
+                </div>
+            <div class="post-tweet">
+                <picture>
+                    <img src="images/perfil.png" alt="">
+                </picture>
+                <div class="elements">
+                    <div class="input" contenteditable="true" data-placeholder="O que está acontecendo?"></div>
+                    <div class="buttons-post">
+                        <div class="attachments">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M7 7C5.34315 7 4 8.34315 4 10C4 11.6569 5.34315 13 7 13C8.65685 13 10 11.6569 10 10C10 8.34315 8.65685 7 7 7ZM6 10C6 9.44772 6.44772 9 7 9C7.55228 9 8 9.44772 8 10C8 10.5523 7.55228 11 7 11C6.44772 11 6 10.5523 6 10Z" fill="currentColor" /><path fill-rule="evenodd" clip-rule="evenodd" d="M3 3C1.34315 3 0 4.34315 0 6V18C0 19.6569 1.34315 21 3 21H21C22.6569 21 24 19.6569 24 18V6C24 4.34315 22.6569 3 21 3H3ZM21 5H3C2.44772 5 2 5.44772 2 6V18C2 18.5523 2.44772 19 3 19H7.31374L14.1924 12.1214C15.364 10.9498 17.2635 10.9498 18.435 12.1214L22 15.6863V6C22 5.44772 21.5523 5 21 5ZM21 19H10.1422L15.6066 13.5356C15.9971 13.145 16.6303 13.145 17.0208 13.5356L21.907 18.4217C21.7479 18.7633 21.4016 19 21 19Z" fill="currentColor" /></svg>
+
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 18V16H8V14H10V12H12V14H14V16H12V18H10Z" fill="currentColor" /><path fill-rule="evenodd" clip-rule="evenodd" d="M6 2C4.34315 2 3 3.34315 3 5V19C3 20.6569 4.34315 22 6 22H18C19.6569 22 21 20.6569 21 19V9C21 5.13401 17.866 2 14 2H6ZM6 4H13V9H19V19C19 19.5523 18.5523 20 18 20H6C5.44772 20 5 19.5523 5 19V5C5 4.44772 5.44772 4 6 4ZM15 4.10002C16.6113 4.4271 17.9413 5.52906 18.584 7H15V4.10002Z" fill="currentColor" /></svg>
+
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 5.99519C2 5.44556 2.44556 5 2.99519 5H11.0048C11.5544 5 12 5.44556 12 5.99519C12 6.54482 11.5544 6.99039 11.0048 6.99039H2.99519C2.44556 6.99039 2 6.54482 2 5.99519Z" fill="currentColor" /><path d="M2 11.9998C2 11.4501 2.44556 11.0046 2.99519 11.0046H21.0048C21.5544 11.0046 22 11.4501 22 11.9998C22 12.5494 21.5544 12.9949 21.0048 12.9949H2.99519C2.44556 12.9949 2 12.5494 2 11.9998Z" fill="currentColor" /><path d="M2.99519 17.0096C2.44556 17.0096 2 17.4552 2 18.0048C2 18.5544 2.44556 19 2.99519 19H15.0048C15.5544 19 16 18.5544 16 18.0048C16 17.4552 15.5544 17.0096 15.0048 17.0096H2.99519Z" fill="currentColor" /></svg>
+
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 13H14C14 14.1046 13.1046 15 12 15C10.8954 15 10 14.1046 10 13H8C8 15.2091 9.79086 17 12 17C14.2091 17 16 15.2091 16 13Z" fill="currentColor" /><path d="M10 10C10 10.5523 9.55228 11 9 11C8.44772 11 8 10.5523 8 10C8 9.44771 8.44772 9 9 9C9.55228 9 10 9.44771 10 10Z" fill="currentColor" /><path d="M15 11C15.5523 11 16 10.5523 16 10C16 9.44771 15.5523 9 15 9C14.4477 9 14 9.44771 14 10C14 10.5523 14.4477 11 15 11Z" fill="currentColor" /><path fill-rule="evenodd" clip-rule="evenodd" d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM20 12C20 16.4183 16.4183 20 12 20C7.58172 20 4 16.4183 4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12Z" fill="currentColor" /></svg>
+
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 17C16.1046 17 17 16.1046 17 15C17 13.8954 16.1046 13 15 13C13.8954 13 13 13.8954 13 15C13 16.1046 13.8954 17 15 17Z" fill="currentColor" /><path fill-rule="evenodd" clip-rule="evenodd" d="M6 3C4.34315 3 3 4.34315 3 6V18C3 19.6569 4.34315 21 6 21H18C19.6569 21 21 19.6569 21 18V6C21 4.34315 19.6569 3 18 3H6ZM5 18V7H19V18C19 18.5523 18.5523 19 18 19H6C5.44772 19 5 18.5523 5 18Z" fill="currentColor" /></svg>
+
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.2721 10.2721C16.2721 12.4813 14.4813 14.2721 12.2721 14.2721C10.063 14.2721 8.27214 12.4813 8.27214 10.2721C8.27214 8.06298 10.063 6.27212 12.2721 6.27212C14.4813 6.27212 16.2721 8.06298 16.2721 10.2721ZM14.2721 10.2721C14.2721 11.3767 13.3767 12.2721 12.2721 12.2721C11.1676 12.2721 10.2721 11.3767 10.2721 10.2721C10.2721 9.16755 11.1676 8.27212 12.2721 8.27212C13.3767 8.27212 14.2721 9.16755 14.2721 10.2721Z" fill="currentColor" /><path fill-rule="evenodd" clip-rule="evenodd" d="M5.79417 16.5183C2.19424 13.0909 2.05438 7.39409 5.48178 3.79417C8.90918 0.194243 14.6059 0.054383 18.2059 3.48178C21.8058 6.90918 21.9457 12.6059 18.5183 16.2059L12.3124 22.7241L5.79417 16.5183ZM17.0698 14.8268L12.243 19.8965L7.17324 15.0698C4.3733 12.404 4.26452 7.97318 6.93028 5.17324C9.59603 2.3733 14.0268 2.26452 16.8268 4.93028C19.6267 7.59603 19.7355 12.0268 17.0698 14.8268Z" fill="currentColor" /></svg>
+                        </div>
+                        <button>Tweetar</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Injected Posts -->
+            <div class="post">
+                <div class="post-header">
+                    <picture>
+                        <svg class="post-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 18H17V16H7V18Z" fill="currentColor" /><path d="M17 14H7V12H17V14Z" fill="currentColor" /><path d="M7 10H11V8H7V10Z" fill="currentColor" /><path fill-rule="evenodd" clip-rule="evenodd" d="M6 2C4.34315 2 3 3.34315 3 5V19C3 20.6569 4.34315 22 6 22H18C19.6569 22 21 20.6569 21 19V9C21 5.13401 17.866 2 14 2H6ZM6 4H13V9H19V19C19 19.5523 18.5523 20 18 20H6C5.44772 20 5 19.5523 5 19V5C5 4.44772 5.44772 4 6 4ZM15 4.10002C16.6113 4.4271 17.9413 5.52906 18.584 7H15V4.10002Z" fill="currentColor" /></svg>
+                    </picture>
+                    <span class="post-topic">Programação</span>
+                    <span class="expand-topic">Ver mais</span>
+                </div>
+                <div class="post-wrapper">
+                    <picture>
+                        <img src="images/perfil.png" alt="" class="user-image">
+                    </picture>
+                    <div class="post-body">
+                        <div class="post-user-info">
+                            <div class="user-info">
+                                <span class="user-name">Tupis</span>
+                                <span class="user-identify">@the_tupis</span>
+                                <span class="post-time-ago"> · 15 s</span>
+                            </div>
+                            <span class="view-more">•••</span>
+                        </div>
+                        <div class="post-content">
+                            <p> Quer acompanhar um pouco do meu trabalho?
+
+                               Me siga no github e veja meus projetos!
+                               Basta clicar na imagem abaixo!
+
+                                Se puder compartilhar, eu ficarei muito grato 💜
+                            </p>
+                            <div class="wrapper-img-post">
+                                <a href="https://github.com/tupis" target="_blank">
+                                    <picture>
+                                        <img src="images/posts/github.png">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="post-react">
+                            
+                            <!-- Comment -->
+                            <div class="comment">
+                                <i class="fa-regular fa-comment"></i>
+                                <p>450</p>
+                            </div>
+
+                            <!-- RT -->
+                            <div class="rt">
+                                <i class="fa-solid fa-retweet"></i>
+                                <p> 1.403</p>
+                            </div>
+
+                            <!-- Heart -->
+                            <div class="heart">
+                                <i class="fa-regular fa-heart"></i>
+                                <p>18,2 mil</p>
+                            </div>                            
+
+                            <!-- Export -->
+                            <div class="share">
+                                <i class="fa-regular fa-share-from-square"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post">
+                <div class="post-header">
+                    <picture>
+                        <svg class="post-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 18H17V16H7V18Z" fill="currentColor" /><path d="M17 14H7V12H17V14Z" fill="currentColor" /><path d="M7 10H11V8H7V10Z" fill="currentColor" /><path fill-rule="evenodd" clip-rule="evenodd" d="M6 2C4.34315 2 3 3.34315 3 5V19C3 20.6569 4.34315 22 6 22H18C19.6569 22 21 20.6569 21 19V9C21 5.13401 17.866 2 14 2H6ZM6 4H13V9H19V19C19 19.5523 18.5523 20 18 20H6C5.44772 20 5 19.5523 5 19V5C5 4.44772 5.44772 4 6 4ZM15 4.10002C16.6113 4.4271 17.9413 5.52906 18.584 7H15V4.10002Z" fill="currentColor" /></svg>
+                    </picture>
+                    <span class="post-topic">Programação</span>
+                    <span class="expand-topic">Ver mais</span>
+                </div>
+                <div class="post-wrapper">
+                    <picture>
+                        <img src="images/perfil.png" alt="" class="user-image">
+                    </picture>
+                    <div class="post-body">
+                        <div class="post-user-info">
+                            <div class="user-info">
+                                <span class="user-name">Tupis</span>
+                                <span class="user-identify">@the_tupis</span>
+                                <span class="post-time-ago"> · 2 semanas</span>
+                            </div>
+                            <span class="view-more">•••</span>
+                        </div>
+                        <div class="post-content">
+                            <p> Ufaaa! Esse projeto deu muito mais trabalho do que o esperado!
+
+                                Olhando pelo lado bom, depois de muito esforço consigo me entender muito melhor com o Grid
+                                
+                                Tecnologias usadas nesse site: HTML, Sass e FontAwesome
+                            </p>
+                            
+                        </div>
+                        <div class="post-react">
+                            
+                            <!-- Comment -->
+                            <picture class="comment">
+                                <i class="fa-regular fa-comment"></i>
+                                <p>223</p>
+                            </picture>
+
+                            <!-- RT -->
+                            <picture class="rt">
+                                <i class="fa-solid fa-retweet"></i>
+                                <p> 753</p>
+                            </picture>
+
+                            <!-- Heart -->
+                            <picture class="heart">
+                                <i class="fa-regular fa-heart"></i>
+                                <p>859</p>
+                            </picture>                            
+
+                            <!-- Export -->
+                            <picture class="share">
+                                <i class="fa-regular fa-share-from-square"></i>
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post">
+                <div class="post-header">
+                    <picture>
+                        <svg class="post-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 18H17V16H7V18Z" fill="currentColor" /><path d="M17 14H7V12H17V14Z" fill="currentColor" /><path d="M7 10H11V8H7V10Z" fill="currentColor" /><path fill-rule="evenodd" clip-rule="evenodd" d="M6 2C4.34315 2 3 3.34315 3 5V19C3 20.6569 4.34315 22 6 22H18C19.6569 22 21 20.6569 21 19V9C21 5.13401 17.866 2 14 2H6ZM6 4H13V9H19V19C19 19.5523 18.5523 20 18 20H6C5.44772 20 5 19.5523 5 19V5C5 4.44772 5.44772 4 6 4ZM15 4.10002C16.6113 4.4271 17.9413 5.52906 18.584 7H15V4.10002Z" fill="currentColor" /></svg>
+                    </picture>
+                    <span class="post-topic">Programação</span>
+                    <span class="expand-topic">Ver mais</span>
+                </div>
+                <div class="post-wrapper">
+                    <picture>
+                        <img src="images/perfil.png" alt="" class="user-image">
+                    </picture>
+                    <div class="post-body">
+                        <div class="post-user-info">
+                            <div class="user-info">
+                                <span class="user-name">Tupis</span>
+                                <span class="user-identify">@the_tupis</span>
+                                <span class="post-time-ago"> · 1 s</span>
+                            </div>
+                            <span class="view-more">•••</span>
+                        </div>
+                        <div class="post-content">
+                            <p> E não esquece de dar uma passadinha no meu LinkedIn, viu?
+                                
+                                É no mesmo esquema, apenas clicar na imagem abaixo que você ja vai ser redirecionado! &lt;3
+
+                                (ou no painel lateral "Quem seguir", apenas para telas maiores)
+                            </p>
+                            <div class="wrapper-img-post">
+                                <a href="https://www.linkedin.com/in/joaotupinamba/" target="_blank">
+                                    <picture>
+                                        <img src="images/posts/linkedIn.png">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="post-react">
+                            
+                            <!-- Comment -->
+                            <div class="comment">
+                                <i class="fa-regular fa-comment"></i>
+                                <p>450</p>
+                            </div>
+
+                            <!-- RT -->
+                            <div class="rt">
+                                <i class="fa-solid fa-retweet"></i>
+                                <p> 1.403</p>
+                            </div>
+
+                            <!-- Heart -->
+                            <div class="heart">
+                                <i class="fa-regular fa-heart"></i>
+                                <p>18,2 mil</p>
+                            </div>                            
+
+                            <!-- Export -->
+                            <div class="share">
+                                <i class="fa-regular fa-share-from-square"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="post">
+                <div class="post-header">
+                    <picture>
+                        <svg class="post-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 18H17V16H7V18Z" fill="currentColor" /><path d="M17 14H7V12H17V14Z" fill="currentColor" /><path d="M7 10H11V8H7V10Z" fill="currentColor" /><path fill-rule="evenodd" clip-rule="evenodd" d="M6 2C4.34315 2 3 3.34315 3 5V19C3 20.6569 4.34315 22 6 22H18C19.6569 22 21 20.6569 21 19V9C21 5.13401 17.866 2 14 2H6ZM6 4H13V9H19V19C19 19.5523 18.5523 20 18 20H6C5.44772 20 5 19.5523 5 19V5C5 4.44772 5.44772 4 6 4ZM15 4.10002C16.6113 4.4271 17.9413 5.52906 18.584 7H15V4.10002Z" fill="currentColor" /></svg>
+                    </picture>
+                    <span class="post-topic">Programação</span>
+                    <span class="expand-topic">Ver mais</span>
+                </div>
+                <div class="post-wrapper">
+                    <picture>
+                        <img src="images/perfil.png" alt="" class="user-image">
+                    </picture>
+                    <div class="post-body">
+                        <div class="post-user-info">
+                            <div class="user-info">
+                                <span class="user-name">Tupis</span>
+                                <span class="user-identify">@the_tupis</span>
+                                <span class="post-time-ago"> · 5 minutos</span>
+                            </div>
+                            <span class="view-more">•••</span>
+                        </div>
+                        <div class="post-content">
+                            <p> Em breve terá algumas atualizações funcionais
+
+                                Apenas voltado na parte do Front End
+
+                                Espero que tenham gostado do resultado "final" Beijoos! 😗😗
+                            </p>
+                        </div>
+                        <div class="post-react">
+                            
+                            <!-- Comment -->
+                            <div class="comment">
+                                <i class="fa-regular fa-comment"></i>
+                                <p>450</p>
+                            </div>
+
+                            <!-- RT -->
+                            <div class="rt">
+                                <i class="fa-solid fa-retweet"></i>
+                                <p> 1.403</p>
+                            </div>
+
+                            <!-- Heart -->
+                            <div class="heart">
+                                <i class="fa-regular fa-heart"></i>
+                                <p>18,2 mil</p>
+                            </div>                            
+
+                            <!-- Export -->
+                            <div class="share">
+                                <i class="fa-regular fa-share-from-square"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+
+        <aside>
+            <div class="wrapper-search">
+                <div class="search">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M18.319 14.4326C20.7628 11.2941 20.542 6.75347 17.6569 3.86829C14.5327 0.744098 9.46734 0.744098 6.34315 3.86829C3.21895 6.99249 3.21895 12.0578 6.34315 15.182C9.22833 18.0672 13.769 18.2879 16.9075 15.8442C16.921 15.8595 16.9351 15.8745 16.9497 15.8891L21.1924 20.1317C21.5829 20.5223 22.2161 20.5223 22.6066 20.1317C22.9971 19.7412 22.9971 19.1081 22.6066 18.7175L18.364 14.4749C18.3493 14.4603 18.3343 14.4462 18.319 14.4326ZM16.2426 5.28251C18.5858 7.62565 18.5858 11.4246 16.2426 13.7678C13.8995 16.1109 10.1005 16.1109 7.75736 13.7678C5.41421 11.4246 5.41421 7.62565 7.75736 5.28251C10.1005 2.93936 13.8995 2.93936 16.2426 5.28251Z" fill="currentColor" /></svg>
+                    <input type="search" name="" id="" placeholder="Buscar no Twitter">
+                </div>
+            </div>
+
+            <div class="content-aside">
+                <div class="other-news">
+                    <div class="card">
+                        <h1 class="title">O que está acontecendo</h1>
+
+                        <div class="news-content">
+                            <div class="news">
+                                <div class="info">
+                                    <p class="topic">Funcionalidade •</p>
+                                    <p class="time">1 de junho de 2022</p>
+                                    <h1 class="headline">Em breve mais atualizações por aqui: algumas funções básicas</h1>
+                                </div>
+                                <picture><img src="images/other-news/javascript-logo.png" alt=""></picture>
+                            </div>
+                        </div>
+                        <div class="news-content">
+                            <div class="news">
+                                <div class="info">
+                                    <p class="topic">Preprocessador • </p>
+                                    <p class="time">2 de junho de 2022</p>
+                                    <h1 class="headline">A tecnologia incrível que mais agilizou esse projeto</h1>
+                                </div>
+                                <picture><img src="images/other-news/sass-logo.png" alt=""></picture>
+                            </div>
+                        </div>
+                        <div class="news-content">
+                            <div class="news">
+                                <div class="info">
+                                    <p class="topic">Redes Sociais • </p>
+                                    <p class="time">1 de outubro de 2022</p>
+                                    <h1 class="headline">Ta esperando o que pra ir me seguir nas redes socias?</h1>
+                                </div>
+                                <picture>
+                                    <img src="images/other-news/instagram-logo.png" alt="">
+                                </picture>
+                            </div>
+                        </div>
+                
+                        <div class="news-content">
+                            <a href="https://www.youtube.com/shorts/jmCNnz4uidE" target="_blank">
+                                <div class="news">
+                                    <div class="info">
+                                        <p class="topic">Entretenimento •</p>
+                                        <p class="time">4 de maio de 2022</p>
+                                        <h1 class="headline">Anão Rafael bombando nas redes sociais</h1>
+                                    </div>
+                                    <picture><img src="images/other-news/anao-rafael.png" alt=""></picture>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="news-content">
+                            <div class="news">
+                                <div class="info">
+                                    <p class="topic">Entretenimento •</p>
+                                    <p class="time">4 de maio de 2022</p>
+                                    <h1 class="headline">'Doutor Estranho no Multiverso da Loucura': veja os Tweets sobre o filme</h1>
+                                </div>
+                                <picture><img src="images/other-news/dr-estranho.jpg" alt=""></picture>
+                            </div>
+                        </div>
+                        <div class="show-more">
+                            <a href="">
+                                <p>Mostrar mais</p>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="suggested-followers">
+                        <h1 class="title">Quem seguir</h1>
+
+                        <a href="https://github.com/tupis" target="_blank">
+                            <div class="user">
+                                <div class="user-display">
+                                    <picture>
+                                        <img src="images/quem-seguir/github.png" alt="">
+                                    </picture>
+                                    <div class="info-user">
+                                        <p class="title">Gihub</p>
+                                        <p class="username">@github</p>
+                                    </div>
+                                </div>
+                                <button class="follow"> Seguir</button>
+                            </div>
+                        </a>
+                        
+                        <a href="https://www.linkedin.com/in/joaotupinamba/" target="_blank">
+                            <div class="user">
+                                <div class="user-display">
+                                    <picture>
+                                        <img src="images/quem-seguir/linkedin.png" alt="">
+                                    </picture>
+                                    <div class="info-user">
+                                        <p class="title">LinkedIn</p>
+                                        <p class="username">@linkedin</p>
+                                    </div>
+                                </div>
+                                <button class="follow"> Seguir</button>
+                            </div>
+                        </a>
+    
+                        <a href="https://www.instagram.com/jh.tupinamba/" target="_blank">
+                            <div class="user">
+                                <div class="user-display">
+                                    <picture>
+                                        <img src="images/quem-seguir/instagram.png" alt="">
+                                    </picture>
+                                    <div class="info-user">
+                                        <p class="title">Instagram</p>
+                                        <p class="username">@instagram</p>
+                                    </div>
+                                </div>
+                                <button class="follow"> Seguir</button>
+                            </div>
+                        </a>
+
+                        
+                        <div class="show-more">
+                            <a href="">
+                                <p>Mostrar mais</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <footer class="footer">
+                    <div class="wrapper-footer">
+                        <a href="">Termos de Serviço</a>
+                        <a href=""> Política de privacidade</a>
+                        <a href="">Política de cookies</a>
+                        <a href="">Acessibilidade</a>
+                        <a href="">Informações de anúncios</a>
+                        <a href="">
+                            <div class="more-footer">
+                                <p>Mais</p>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 12C8 13.1046 7.10457 14 6 14C4.89543 14 4 13.1046 4 12C4 10.8954 4.89543 10 6 10C7.10457 10 8 10.8954 8 12Z" fill="currentColor" /><path d="M14 12C14 13.1046 13.1046 14 12 14C10.8954 14 10 13.1046 10 12C10 10.8954 10.8954 10 12 10C13.1046 10 14 10.8954 14 12Z" fill="currentColor" /><path d="M18 14C19.1046 14 20 13.1046 20 12C20 10.8954 19.1046 10 18 10C16.8954 10 16 10.8954 16 12C16 13.1046 16.8954 14 18 14Z" fill="currentColor" /></svg>
+                            </div>
+                        </a>
+                        <a href="">2022 Tupi, Inc.</a>
+                    </div>
+                </footer>
+            </div>
+        </aside>
+        
+    </div>
+</body>
+</html>

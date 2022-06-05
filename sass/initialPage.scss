@@ -1,0 +1,632 @@
+@mixin fontFamily($family, $size, $color, $weight) {
+    font-family: $family;
+    font-size: $size;
+    color: $color;
+    font-weight: $weight;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: $backgroundColorDark;
+}
+
+.content{
+    display: grid;
+    margin: auto;
+    justify-content: center;
+    grid-template-columns: minmax(270px, 270px) minmax(500px, 560px) minmax(370px, 370px);
+    max-width: 1400px;
+    color: $FontColorDark;
+}
+
+.wrapper-sidebar{
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    height: 100%;
+    width: 100%;
+
+    
+    & .left-sidebar{
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        margin-right: 10px;
+    
+        & ul{
+            list-style: none;
+            & li{
+                display: flex;
+                &:nth-child(2){
+                    span {
+                        font-weight: 900;
+                    }
+                }
+                &:nth-child(3){
+                    display: none;
+                }
+                & svg{
+                    height: 30px;
+                    width: 30px;
+                    
+                }
+                & a{
+                    display: flex;
+                    align-items: center;
+                    text-decoration: none;
+                    cursor: pointer;
+    
+                    @include fontFamily($fontFamily, 1.1em, $white, 300);
+    
+                    padding: 8px;
+
+                    & span{
+                        padding: 10px 20px;
+                    }
+    
+                    & .logo-twitter{
+                        padding-left: 7px;
+                    }
+    
+                    &:hover{
+                        transition: 0.3s;
+                        transition-property: background-color;
+    
+                        border-radius: 50px;
+                        background-color: $backgroundSidebarHover;
+                    }
+                }
+            }
+        }
+    
+        & i{
+            margin: 2px 0 0.1em 0; 
+            font-size: 1.9em;
+            padding: 10px;
+            cursor: pointer;
+            &:hover{
+                transition: 0.3s;
+                transition-property: background-color;
+    
+                background-color: $backgroundLogoHover;
+                border-radius: 50px;
+            }
+        }
+    
+        & button{
+            @include fontFamily($fontFamily, 1.2em, $white, 700);
+            transition: 0.5s;
+            width: 100%;
+    
+            border-radius: 50px;
+            padding: 15px;
+            margin-top: 20px;
+            border: none;
+    
+            background-color: $blue;
+            cursor: pointer;
+            &:hover{
+                transition: 0.5s;
+                background-color: $backgroundButtonHover;
+            }
+            
+            svg{
+                display: none;
+            }
+
+        }
+    
+        & .perfil{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: calc(100vh - 355%);
+            padding: 10px 17px;
+            font-family: $fontFamily;
+            cursor: pointer;
+            & p{
+                margin: 0.1em;
+            }
+            & p:nth-child(2){
+                color: $gray;
+            }
+            & img{
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+            }
+            & span{
+                align-self: flex-start;
+            }
+            &:hover{
+                transition: 0.3s;
+                    transition-property: background-color;
+    
+                    border-radius: 50px;
+                    background-color: #ffffff18;
+            }
+        }
+    
+    
+    }
+}
+
+.main{
+    max-width: 551.984px;
+    border-left: 1px solid $borderGray;
+    border-right: 1px solid $borderGray;
+
+        button{
+            display: none;
+        }
+    
+        & .wrapper-top{
+            top: 0;
+            position: sticky;
+            width: 100%;
+            height: 50px;
+            & .top{
+                display: none;
+                bottom: 5px;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: #0000005b;
+                backdrop-filter: blur(2px);
+                & .top-menu{
+                    display: flex;
+                    & h1{
+                        @include fontFamily($fontFamily, 1.2rem, $white , 600);
+                        padding: 10px;
+                    }
+                    & img{
+                        width: 35px;
+                        height: 35px;
+                        display: none;
+                        border-radius: 50%;
+                        margin-left: 10px;
+                    }
+                }
+                & svg{
+                    width: 20px;
+                    height: 20px;
+                    padding: 10px;
+                    margin-right: 5px;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    &:hover{
+                        background-color: $backgroundSidebarHover;
+                    }
+                }
+            }
+        }
+    & .post-tweet{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        border-bottom: 1px solid $borderGray;
+        & img{
+            width: 50px;
+            height: 50px;
+            margin: 10px 10px 0px 10px;
+            border-radius: 50%;
+        }
+        & .elements{
+            width: 100%;
+            & .input{
+                cursor: text;
+                outline: none;
+                min-height: 15px;
+                max-height: 800px;
+                padding: 30px 0px;
+                border-bottom: 1px solid $borderGray;
+                position: inherit;
+                max-width: 100%;
+                &:empty::before{
+                    content: attr(data-placeholder);
+                    @include fontFamily($fontFamily, 1rem, $gray, 300)
+                }
+            }
+            & .buttons-post{
+                display: flex;
+                justify-content: space-between;
+                margin: 10px 0px;
+                & .attachments{
+                    color: $blue;
+                    margin-left: 5px;
+                    &:nth-child(1){
+                        margin-left: 10px;
+                    }
+                    & svg{
+                        width: 20px;
+                        height: 20px;
+                        cursor: pointer;
+                        padding: 7px;
+                        border-radius: 20px;
+                        &:hover{
+                            transition: 0.3s;
+                            background-color: $backgroundLogoHover;
+                        }
+                    }
+                }
+                & button{
+                    @include fontFamily($fontFamily, 0.9rem, $white, 700);
+                    transition: 0.5s;
+            
+                    border-radius: 50px;
+                    padding: 7px 15px;
+                    margin-right: 10px;
+                    border: none;
+            
+                    background-color: $blue;
+                    cursor: pointer;
+                    &:hover{
+                        transition: 0.5s;
+                        background-color: $backgroundButtonHover;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.post{
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid $borderGray;
+    & .post-header{
+        color: $gray;
+        display: flex;
+        align-items: center;
+        margin: 0.6em 0;
+        font-size: 0.9em;
+        
+        & .post-icon{
+            margin: 0 10px 0 51px;
+            width: 20px;
+            height: 20px;
+        }
+        & .post-topic{
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+        & .expand-topic{
+            font-weight: 900;
+            margin-left: 0.9em;
+            color: $blue;
+            justify-content: flex-end;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+    & .post-wrapper{
+        display: flex;
+        & .user-image{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin: 0 0.65em;
+        }
+        & .post-body{
+            width: 100%;
+            @include fontFamily($fontFamily, 1em, $white, 400);
+            & .post-user-info{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                & .user-info{
+                    & .user-name{
+                        font-weight: 600;
+                        font-size: 1.1em;
+                        color: $white;
+                        margin-right: 5px;
+                    }
+                    & .user-identify{
+                        color: $gray;
+                    }
+                    & .post-time-ago{
+                        color: $gray;
+                    }
+                }
+                & .view-more{
+                    padding: 5px;
+                    margin-right: 0.9em;
+                    border-radius: 20px;
+                    cursor: pointer;
+                    &:hover{
+                        background-color: $backgroundSidebarHover;
+                    }
+                }
+            }
+            & .post-content{
+                & p{
+                    white-space: pre-line;
+                    font-size: 1em;
+                }
+                .wrapper-img-post{
+                    margin-right: 20px;
+                    picture{
+                        & img{
+                            width: 100%;
+                            
+                            margin-top: 10px;
+                            margin: 10px 20px 0 0;
+                            border-radius: 20px;
+                            
+                        }
+                    }
+                }
+            }
+            & .post-react{
+                margin: 7px 0;
+                display: flex;
+                color: $gray;
+                justify-content: space-between;
+                
+                .comment, .rt, .heart, .share{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    cursor: pointer;
+                    & i {
+                        border-radius: 20px;
+                        padding: 10px;
+                    }
+                    & p{
+                        font-size: 0.9em;
+                    }
+                }
+
+                @mixin post-react($color, $bgColor: transparent) {
+                    color: $color;
+                    background-color: $bgColor;
+                }
+
+                & .comment:hover{
+                    & i{
+                        @include post-react(#0088ff, rgba(0, 72, 255, 0.188));
+                    }
+                    & p{
+                        @include post-react(#0062ff, );
+                    }
+                }
+                & .rt:hover{
+                    & i{
+                        @include post-react(#12ea56, #12ea4117);
+                    }
+                    & p{
+                        @include post-react(#12ea56, );
+                    }
+                }
+                & .heart:hover{
+                    & i{
+                        @include post-react(#e9264a,#ff00151d);
+                    }
+                    & p{
+                        @include post-react(#e9264a);
+                    }
+                }
+                & .share:hover{
+                    & i{
+                        @include post-react(#0088ff, rgba(0, 72, 255, 0.188));
+                    }
+                }
+            }
+        }
+    }
+    &:hover{
+        background-color: $backgroundNewsHover;
+        cursor: pointer;
+    }
+}
+
+aside{
+    & .wrapper-search{
+        width: 330px;
+        margin: auto;
+        & .search{
+            position: fixed;
+            display: flex;
+            align-items: center;
+            margin: 5px auto 15px auto;
+            height: 50px;
+            background-color: $backgroundSearch;
+            border-radius: 50px;
+            min-width: 330px;
+            z-index: 2;
+            & svg{
+                padding: 0px 20px;
+                height: 20px;
+                width: 20px;
+                color: $gray;
+            }
+            & input{
+                background-color: $backgroundSearch;
+                border: none;
+                width: 77%;
+                color: $white;
+                &::-webkit-search-cancel-button{
+                    //personalizar depois (e descobrir como muda o background)
+                    content: "";
+                }
+                &::placeholder{
+                    color: $gray;
+                    font-size: 1.1em;
+                }
+                &:focus{
+                    border: none;
+                    outline: none;
+                }
+            }
+        }
+    }
+
+    & .content-aside{
+        z-index: 1;
+        position: sticky;
+        top: -50vmin;
+        
+        & .other-news{
+            margin-top: 70px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+        
+            & .card{
+                display: flex;
+                flex-direction: column;
+        
+                border-radius: 20px;
+                width: 330px;
+                background-color: $backgroundCard;
+                & .title{
+                    @include fontFamily($fontFamily, 1.2em, $white, 800);
+                    padding: 10px 20px;
+                }
+                & .news-content{
+                    padding-left: 20px;
+                    cursor: pointer;
+                    a{
+                        text-decoration: none;
+                    }
+                    & .news{
+                        display: flex;
+                        & .info{
+                            display: grid;
+                            grid-template-columns: 4fr 5fr;
+                            & .topic{
+                                @include fontFamily($fontFamily, 0.8em, $gray, 100);
+                                padding: 15px 0px 5px 0px;
+                            }
+                            & .time{
+                                @include fontFamily($fontFamily, 0.8em, $gray, 100);
+                                justify-self: start;
+                                padding: 15px 0px 0px 0px;
+                            }
+                            & .headline{
+                                @include fontFamily($fontFamily, 1em, $white, 500);
+                                grid-column: 1/4;
+                                padding-bottom: 15px;
+                            }
+                        }
+                        & picture{
+                            padding: 15px 15px 0px 20px;
+                            & img{
+                                width: 60px;
+                                height: 60px;
+                                border-radius: 10px;
+                            }
+                        }
+                    }
+                    &:hover{
+                        transition: 0.3s;
+                        background-color: $backgroundNewsHover;
+                    }
+                }
+            }
+            & .show-more{
+                text-decoration: none;
+                padding: 15px 15px ;
+                border-radius: 0px 0px 20px 20px;
+                cursor: pointer;
+                & a{
+                    @include fontFamily($fontFamily, 0.9em, $blue, 300);
+                    text-decoration: none;
+                }
+                &:hover{
+                    background-color: $backgroundNewsHover;
+                }
+            }
+        }
+        & .suggested-followers{
+            @extend .card;
+            margin-top: 20px;
+
+            a{
+                text-decoration: none;
+                .user{
+                    cursor: pointer;
+                    & .title:hover{
+                        text-decoration: underline;
+                    }
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 10px 0px 10px 20px;
+                    & .user-display{
+                        display: flex;
+                        align-items: center;
+                        & img{
+                            width: 45px;
+                            height: 45px;
+                            border-radius: 50%;
+                            background-color: white;
+                        }
+                        & .title{
+                            @include fontFamily($fontFamily, 1.1em, $white, 700);
+                            padding: 0;
+                            margin-left: 10px
+                        }
+                        & .username{
+                            @include fontFamily($fontFamily, 0.9em, $gray, 200);
+                            padding: 0;
+                            margin-left:10px;
+                        }
+                    }
+                    & .follow{
+                        @include fontFamily($fontFamily, 0.9em, $black, 500);
+                        width: 80px;
+                        height: 35px;
+                        margin-right: 20px;
+                        background-color: $white;
+                        border: none;
+                        border-radius: 20px;
+                        cursor: pointer;
+        
+                    }
+                    &:hover{
+                        transition: 0.3s;
+                        background-color: $backgroundNewsHover;
+                    }
+                }
+            }
+            
+        }
+        & .footer{
+            & .wrapper-footer{
+                margin: 20px 0px 0px 27px;
+                display: grid;
+                width: 330px;
+                grid-template-columns: repeat(2, 1fr);
+                & a{
+                    margin: 4px 0px;
+                    @include fontFamily($fontFamily, 0.8em, $gray, 200);
+                    text-decoration: none;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                    &:last-child{
+                        cursor: none;
+                        text-decoration: none;
+                    }
+                }
+                & .more-footer{
+                    display: flex;
+                    align-items: center;
+                    & svg{
+                        margin-left: 2px;
+                        width: 13px;
+                        height: 13px;
+                    }
+                }
+            }
+        }
+    }
+}
