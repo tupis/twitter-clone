@@ -20,22 +20,21 @@ Etapas:
 
 1. Clone este repositório
 ```
-$ git clone https://github.com/tupis/twitter-clone.git
+$ git clone https://github.com/tupis/univer-landing-page.git
 ```
 2. Acesse a pasta do projeto no terminal/cmd
 ```
-$ cd twitter-clone
+$ cd univer-landing-page
 ```
-3. Instale as dependências
+3. Inicialize o html
 ```
-$ npm install
+$ start index.html
 ```
-4. Execute a aplicação em modo de desenvolvimento
+4. Abra seu editor de cõdigo
 ```
-$ npm start
+$ code .
 ```
-
-- **Obs**: O servidor inciará na porta: **3000** - acesse <http://localhost:3000>
+- **Recomendação**: usar a extensão [Live Server](https://github.com/ritwickdey/vscode-live-server-plus-plus) no VsCode para atualização dinâmica.
 
 ## 📚 Funcionalidades
 
@@ -58,7 +57,7 @@ $ npm start
 
 Principais tecnologia usada neste projeto
 
-* [React](https://pt-br.reactjs.org/docs/getting-started.html) - A biblioteca usada
+* [HTML5](https://developer.mozilla.org/pt-BR/docs/Web/HTML) - Linguagem de marcação
 * [Sass](https://sass-lang.com/documentation/) - Pre processador CSS
 
 ## 📄 Licença
